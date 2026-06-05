@@ -1,28 +1,726 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Romane Savaranin — Étudiante en communication à l'EFAP Bordeaux" />
+  <title>Romane Savaranin — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="header container">
-        <h1>ÇIMEN</h1>
-        <div class="menu">
-            <h2>Mon travail</h2>
-            <h2>Demande de renseignement</h2>
-            <h2>A propos</h2>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#accueil" class="nav-logo">Romane <span>S.</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#accueil"    onclick="closeMobileMenu()">Accueil</a>
+      <a href="#apropos"    onclick="closeMobileMenu()">À propos</a>
+      <a href="#projets"    onclick="closeMobileMenu()">Projets</a>
+      <a href="#competences" onclick="closeMobileMenu()">Compétences</a>
+      <a href="#experience" onclick="closeMobileMenu()">Expérience</a>
+      <a href="#contact"    onclick="closeMobileMenu()">Me contacter</a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO — ACCUEIL
+  ============================================================ -->
+  <section id="accueil">
+    <div class="hero-inner">
+
+      <!-- Texte -->
+      <div class="hero-text">
+        <div class="hero-badge">Disponible pour un stage</div>
+
+        <h1 class="hero-name">
+          Romane<br />
+          <em>Savaranin</em>
+        </h1>
+
+        <p class="hero-role">Étudiante en Communication · EFAP Bordeaux</p>
+
+        <p class="hero-tagline">
+          Passionnée de communication créative et de stratégie digitale,
+          je construis des projets qui allient sens et esthétique —
+          avec rigueur, curiosité et envie d'apprendre.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projets" class="btn btn-primary">
+            Voir mes projets
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Me contacter
+          </a>
         </div>
+      </div>
+
+      <!-- Visuel -->
+      <div class="hero-visual">
+        <div class="hero-avatar">
+          <div class="avatar-decoration"></div>
+          <div class="hero-avatar-inner">
+            <span class="avatar-initials">RS</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <hr>
+
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+
+  <!-- ============================================================
+       À PROPOS
+  ============================================================ -->
+  <section id="apropos">
+    <div class="about-grid">
+
+      <!-- Texte -->
+      <div class="about-text reveal">
+        <span class="section-label">À propos</span>
+        <h2 class="section-title">Une étudiante curieuse,<br />créative et engagée</h2>
+
+        <p>
+          Je m'appelle Romane, j'ai 20 ans et je suis actuellement en 2e année
+          à l'<strong>EFAP Bordeaux</strong>, une école de communication et de
+          relations publiques reconnue. Mon parcours est guidé par une vraie
+          passion pour la communication sous toutes ses formes : digitale,
+          visuelle, éditoriale ou stratégique.
+        </p>
+        <p>
+          Mon objectif est d'intégrer un <strong>Master en communication</strong>
+          afin d'approfondir mes compétences et de me spécialiser dans la
+          communication de marque et le marketing digital. Je suis convaincue
+          que les meilleures campagnes naissent à l'intersection de la créativité
+          et de la donnée.
+        </p>
+        <p>
+          En dehors de mes études, j'aime explorer de nouveaux outils de création,
+          m'inspirer des tendances visuelles et suivre l'évolution des réseaux sociaux.
+          Je suis disponible et enthousiaste à l'idée de rejoindre une équipe
+          dynamique pour un stage enrichissant.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats reveal reveal-delay-1">
+        <div class="stat-card">
+          <span class="stat-number">2e</span>
+          <span class="stat-label">Année à l'EFAP</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">9</span>
+          <span class="stat-label">Mois de stages</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Langues parlées</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Créativité</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROJETS
+  ============================================================ -->
+  <section id="projets">
+    <div class="projects-header reveal">
+      <span class="section-label">Projets</span>
+      <h2 class="section-title">Mes réalisations</h2>
+      <p class="section-subtitle">
+        Une sélection de projets académiques, personnels et de stage
+        qui illustrent mes compétences en communication et création.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Carte 1 -->
+      <article class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-thumb-label">✦</span>
+          <div class="project-overlay">
+            <span class="project-overlay-text">Voir le projet</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Community Management</span>
+          <h3 class="project-title">Stratégie réseaux sociaux — Marque locale</h3>
+          <p class="project-desc">
+            Élaboration d'une stratégie de contenu pour une enseigne locale :
+            calendrier éditorial, création de visuels et suivi des KPIs.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Instagram</span>
+            <span class="tag">Canva</span>
+            <span class="tag">Stratégie</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 2 -->
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <span class="project-thumb-label">◈</span>
+          <div class="project-overlay">
+            <span class="project-overlay-text">Voir le projet</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Direction Artistique</span>
+          <h3 class="project-title">Identité visuelle — Projet académique EFAP</h3>
+          <p class="project-desc">
+            Création complète d'une identité de marque fictive : logo, charte
+            graphique, mockups et présentation client.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Illustrator</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag butter">Branding</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 3 -->
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-thumb">
+          <span class="project-thumb-label">◎</span>
+          <div class="project-overlay">
+            <span class="project-overlay-text">Voir le projet</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Gestion de Projet</span>
+          <h3 class="project-title">Coordination événement — Assistante CDP</h3>
+          <p class="project-desc">
+            Assistance à la chef de projet lors de l'organisation d'un événement
+            d'entreprise : planning, brief fournisseurs, reporting.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Événementiel</span>
+            <span class="tag butter">Coordination</span>
+            <span class="tag">Reporting</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 4 -->
+      <article class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-thumb-label">❋</span>
+          <div class="project-overlay">
+            <span class="project-overlay-text">Voir le projet</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Rédaction</span>
+          <h3 class="project-title">Campagne de communication — EFAP</h3>
+          <p class="project-desc">
+            Conception d'une campagne de sensibilisation : messages clés,
+            affichage, réseaux sociaux et relations presse.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Copywriting</span>
+            <span class="tag">RP</span>
+            <span class="tag">Presse</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 5 -->
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <span class="project-thumb-label">◇</span>
+          <div class="project-overlay">
+            <span class="project-overlay-text">Voir le projet</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-category">Digital</span>
+          <h3 class="project-title">Audit & recommandations — Présence digitale</h3>
+          <p class="project-desc">
+            Audit complet de la présence en ligne d'une association, suivi
+            de recommandations stratégiques et d'un plan d'action.
+          </p>
+          <div class="project-tags">
+            <span class="tag butter">Audit</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Analytics</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 6 — "À venir" -->
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-thumb" style="background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);">
+          <span class="project-thumb-label" style="color: rgba(0,0,0,0.2);">+</span>
+          <div class="project-overlay">
+            <span class="project-overlay-text">Bientôt</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="project-category" style="color: #bbb;">Prochain projet</span>
+          <h3 class="project-title" style="color: #bbb;">En cours de réalisation…</h3>
+          <p class="project-desc">
+            De nouveaux projets arrivent bientôt. Restez connecté·e !
+          </p>
+          <div class="project-tags">
+            <span class="tag" style="background:#f5f5f5; color:#ccc;">À venir</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       COMPÉTENCES
+  ============================================================ -->
+  <section id="competences">
     <div class="container">
-         <img src="images/saifle1-0925.jpg" alt="" class="full_width">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque tenetur sed dolorum voluptatum cumque libero temporibus et, aperiam pariatur accusantium nesciunt quas magnam debitis sunt quis? Quibusdam cumque libero error!</p>
+      <div class="reveal" style="margin-bottom: 56px;">
+        <span class="section-label">Compétences</span>
+        <h2 class="section-title">Mes outils & savoir-faire</h2>
+        <p class="section-subtitle">
+          Des compétences techniques et linguistiques acquises en formation
+          et renforcées par mes expériences de stage.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Adobe Suite -->
+        <div class="skill-category reveal">
+          <div class="skill-icon">🎨</div>
+          <h3>Suite Adobe</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Photoshop</span>
+                <span>Avancé</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Illustrator</span>
+                <span>Avancé</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>InDesign</span>
+                <span>Intermédiaire</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Premiere Pro</span>
+                <span>Notions</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:40%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Canva</span>
+                <span>Expert</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Communication -->
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-icon">💬</div>
+          <h3>Communication</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Réseaux sociaux</span>
+                <span>Avancé</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Rédaction web</span>
+                <span>Avancé</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Relations presse</span>
+                <span>Intermédiaire</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Gestion de projet</span>
+                <span>Intermédiaire</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">
+                <span>Stratégie digitale</span>
+                <span>En cours</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Langues -->
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-icon">🌍</div>
+          <h3>Langues</h3>
+          <ul class="lang-list">
+
+            <li class="lang-item">
+              <span class="lang-flag">🇫🇷</span>
+              <div class="lang-info">
+                <span class="lang-name">Français</span>
+                <span class="lang-level">Langue maternelle</span>
+              </div>
+              <div class="lang-dots">
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+              </div>
+            </li>
+
+            <li class="lang-item">
+              <span class="lang-flag">🌴</span>
+              <div class="lang-info">
+                <span class="lang-name">Créole</span>
+                <span class="lang-level">Courant</span>
+              </div>
+              <div class="lang-dots">
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot"></span>
+              </div>
+            </li>
+
+            <li class="lang-item">
+              <span class="lang-flag">🇬🇧</span>
+              <div class="lang-info">
+                <span class="lang-name">Anglais</span>
+                <span class="lang-level">Intermédiaire (B1–B2)</span>
+              </div>
+              <div class="lang-dots">
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot filled"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- Outils complémentaires -->
+          <div style="margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--border);">
+            <h3 style="margin-bottom: 14px; font-size: 1rem;">Outils bureautiques</h3>
+            <div>
+              <span class="tag">Microsoft Office</span>
+              <span class="tag">Google Workspace</span>
+              <span class="tag butter">Notion</span>
+              <span class="tag butter">Trello</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="gallery">
-        <img src="images/WLQBNycbrvwDtgbrcdLbaE.jpg" alt="">
-        <img src="images/Bachelor's_button,_Basket_flower,_Boutonniere_flower,_Cornflower_-_3.jpg" alt="">
+  </section>
+
+
+  <!-- ============================================================
+       EXPÉRIENCE & FORMATION
+  ============================================================ -->
+  <section id="experience">
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 56px;">
+        <span class="section-label">Parcours</span>
+        <h2 class="section-title">Expérience & Formation</h2>
+        <p class="section-subtitle">
+          Un parcours académique solide, enrichi par des expériences
+          professionnelles concrètes en entreprise.
+        </p>
+      </div>
+
+      <div class="experience-inner">
+
+        <!-- Timeline expériences -->
+        <div>
+          <h3 style="margin-bottom: 32px; font-size: 1.1rem; color: var(--text-light); font-weight: 500; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem;">Expériences professionnelles</h3>
+
+          <div class="timeline reveal">
+
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">5 mois · 2024</span>
+              <div class="timeline-title">Assistante Chef de Projet</div>
+              <div class="timeline-place">Stage en entreprise</div>
+              <p class="timeline-desc">
+                Accompagnement d'une chef de projet dans la gestion et le suivi
+                d'opérations de communication. Coordination des prestataires,
+                rédaction de briefs, reporting et participation aux réunions client.
+              </p>
+              <div style="margin-top: 12px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="tag">Gestion de projet</span>
+                <span class="tag">Coordination</span>
+                <span class="tag butter">Client</span>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-date">4 mois · 2023</span>
+              <div class="timeline-title">Community Manager</div>
+              <div class="timeline-place">Stage en entreprise</div>
+              <p class="timeline-desc">
+                Gestion quotidienne des réseaux sociaux : création de contenus,
+                programmation, animation de communauté et analyse des performances.
+                Proposition de nouvelles lignes éditoriales.
+              </p>
+              <div style="margin-top: 12px; display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="tag">Social Media</span>
+                <span class="tag">Création contenu</span>
+                <span class="tag butter">Analytics</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Formation -->
+        <div>
+          <h3 style="margin-bottom: 32px; font-size: 0.8rem; color: var(--text-light); font-weight: 500; font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.1em;">Formation académique</h3>
+
+          <div class="edu-cards">
+
+            <div class="edu-card reveal">
+              <span class="edu-card-badge">En cours</span>
+              <span class="edu-card-date">2023 — 2026</span>
+              <h3>Bachelor Communication</h3>
+              <div class="edu-card-place">EFAP Bordeaux — École des métiers de la communication</div>
+              <div class="edu-mentions">
+                <span class="tag">Relations publiques</span>
+                <span class="tag">Marketing digital</span>
+                <span class="tag butter">Journalisme</span>
+              </div>
+            </div>
+
+            <div class="edu-card reveal reveal-delay-1">
+              <span class="edu-card-badge" style="background: var(--butter); color: #7a6b00;">Obtenu</span>
+              <span class="edu-card-date">2023</span>
+              <h3>Baccalauréat — Mention Bien</h3>
+              <div class="edu-card-place">Lycée · Série générale</div>
+              <div class="edu-mentions">
+                <span class="tag">Anglais AMC</span>
+                <span class="tag">SES</span>
+                <span class="tag">Mathématiques</span>
+              </div>
+            </div>
+
+            <div class="edu-card reveal reveal-delay-2" style="background: var(--butter); border-color: var(--butter-dark);">
+              <span class="edu-card-date" style="color: #c8a800;">Objectif 2026</span>
+              <h3>Master en Communication</h3>
+              <div class="edu-card-place">Spécialisation envisagée : communication de marque ou marketing digital</div>
+              <div class="edu-mentions">
+                <span class="tag butter">Stratégie de marque</span>
+                <span class="tag butter">Communication digitale</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="contact-inner">
+
+      <div class="reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Travaillons ensemble</h2>
+        <p>
+          Disponible pour un stage, une collaboration ou simplement pour échanger.
+          N'hésitez pas à me contacter, je vous réponds dans les plus brefs délais.
+        </p>
+      </div>
+
+      <a href="mailto:romane.savaranin@email.com" class="contact-email-display reveal">
+        <span>✉</span>
+        romane.savaranin@email.com
+      </a>
+
+      <!-- Formulaire -->
+      <div class="contact-form reveal">
+        <form id="contactForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Prénom & Nom</label>
+              <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Objet</label>
+            <input type="text" id="subject" name="subject" placeholder="Proposition de stage, collaboration…" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Bonjour Romane, je souhaite…" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Envoyer le message →</button>
+
+          <div class="form-success" id="formSuccess">
+            ✓ Message envoyé ! Je vous répondrai très prochainement.
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="social-links reveal">
+        <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="#" class="social-link" aria-label="Instagram" title="Instagram">ig</a>
+        <a href="#" class="social-link" aria-label="Behance" title="Behance">be</a>
+        <a href="#" class="social-link" aria-label="Email" title="Email">@</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <p>© 2025 <span>Romane Savaranin</span> — Tous droits réservés · Fait avec <span>♥</span> à Bordeaux</p>
+  </footer>
+
+
+  <!-- ============================================================
+       JAVASCRIPT LÉGER
+  ============================================================ -->
+  <script>
+    /* --- Navbar scroll shadow --- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    /* --- Hamburger menu mobile --- */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+    }
+
+    /* --- Scroll reveal --- */
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    /* --- Formulaire (simulation d'envoi) --- */
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Envoi en cours…';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        successMsg.style.display = 'block';
+        form.reset();
+        btn.textContent = 'Envoyer le message →';
+        btn.disabled = false;
+
+        setTimeout(() => {
+          successMsg.style.display = 'none';
+        }, 5000);
+      }, 1200);
+    });
+  </script>
+
 </body>
 </html>
